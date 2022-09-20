@@ -5,9 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f3c25dd-89c2-45f0-8a43-b6261260d9f4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/transferrer/BankTransferrer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/transferrer/BankTransferrerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/transferrer/Account.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/transferrer/AccountLockable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/transferrer/LockProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/transferrer/Lockable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/transferrer/ReentrantLockAccountProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/transferrer/ReentrantLockBankTransferrer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/transferrer/SemaphoreProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/transferrer/SimpleBankTransferrer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/transferrer/SyncronizedBankTransferrer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/transferrer/ReentrantLockBankTransferrerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/transferrer/SimpleBankTransferrerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/transferrer/SyncronizedBankTransferrerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/transferrer/BankTransferrer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/transferrer/BankTransferrer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/transferrer/BankTransferrerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/transferrer/BankTransferrer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/transferrer/BankTransferrer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/transferrer/BankTransferrerTest.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,8 +49,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="JUnit5 Test Class" />
+        <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -56,16 +72,23 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="jdk.selected.JAVA_MODULE" value="adopt-openjdk-11" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="ssh.settings" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="transferrer" />
+    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
@@ -73,15 +96,8 @@
       <recent name="transferrer" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BankTransferrerTest.nameTest">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="transferrer.Main" />
-      <module name="webinar-bank-transfers" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BankTransferrerTest.nameTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.transferrer in webinar-bank-transfers">
+    <configuration name="ReentrantLockBankTransferrerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="webinar-bank-transfers" />
       <extension name="coverage">
         <pattern>
@@ -90,17 +106,81 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="transferrer" />
-      <option name="MAIN_CLASS_NAME" value="transferrer.BankTransferrerTest" />
-      <option name="METHOD_NAME" value="nameTest" />
+      <option name="MAIN_CLASS_NAME" value="transferrer.ReentrantLockBankTransferrerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReentrantLockBankTransferrerTest.should_get_expected_sums_in_both_accounts" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="webinar-bank-transfers" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="transferrer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="transferrer" />
+      <option name="MAIN_CLASS_NAME" value="transferrer.ReentrantLockBankTransferrerTest" />
+      <option name="METHOD_NAME" value="should_get_expected_sums_in_both_accounts" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReentrantLockBankTransferrerTest.should_stay_consintent_sum_between_two_accounts_in_parrallel_execution" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="webinar-bank-transfers" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="transferrer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="transferrer" />
+      <option name="MAIN_CLASS_NAME" value="transferrer.ReentrantLockBankTransferrerTest" />
+      <option name="METHOD_NAME" value="should_stay_consintent_sum_between_two_accounts_in_parrallel_execution" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SyncronizedBankTransferrerTest.should_stay_consintent_sum_between_two_accounts_in_parrallel_execution" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="webinar-bank-transfers" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="transferrer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="transferrer" />
+      <option name="MAIN_CLASS_NAME" value="transferrer.SyncronizedBankTransferrerTest" />
+      <option name="METHOD_NAME" value="should_stay_consintent_sum_between_two_accounts_in_parrallel_execution" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="transferrer in webinar-bank-transfers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="webinar-bank-transfers" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="transferrer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="transferrer" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.BankTransferrerTest.nameTest" />
-        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.transferrer in webinar-bank-transfers" />
+        <item itemvalue="JUnit.ReentrantLockBankTransferrerTest.should_stay_consintent_sum_between_two_accounts_in_parrallel_execution" />
+        <item itemvalue="JUnit.ReentrantLockBankTransferrerTest.should_get_expected_sums_in_both_accounts" />
+        <item itemvalue="JUnit.ReentrantLockBankTransferrerTest" />
+        <item itemvalue="JUnit.SyncronizedBankTransferrerTest.should_stay_consintent_sum_between_two_accounts_in_parrallel_execution" />
       </list>
     </recent_temporary>
   </component>
@@ -113,10 +193,22 @@
       <option name="presentableId" value="Default" />
       <updated>1663662325289</updated>
       <workItem from="1663662327231" duration="592000" />
+      <workItem from="1663689322423" duration="6179000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
